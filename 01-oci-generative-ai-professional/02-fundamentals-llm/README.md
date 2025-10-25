@@ -12,6 +12,8 @@
 This module covers a theoretical understanding of what large language models are, what they do and how they work at a
 technical level.
 
+You can find the [Skill Check Questions here.](./QUESTIONS.MD)
+
 ## Table of Contents
 
 1. [Introduction to Large Language Models](#introduction-to-large-language-models)
