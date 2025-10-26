@@ -24,6 +24,8 @@ You can find the [Skill Check Questions here.](./QUESTIONS.MD)
 6. [Hallucinations](#hallucinations)
 7. [LLM Applications](#llm-applications)
 
+---
+
 ## Introduction to Large Language Models
 
 ### What is a language model?
