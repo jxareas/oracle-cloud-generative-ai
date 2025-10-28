@@ -16,7 +16,9 @@ This module covers the core capabilities of the Oracle Cloud Infrastructure Gene
 - Dedicated AI clusters
 - Generative AI security architecture
 
-You can find the [Skill Check Questions here.](./QUESTIONS.md)
+You can find the Skill Check Questions at [`QUESTIONS.md`](./QUESTIONS.md)
+
+Similarly, you can find the Module Labs at [`./code`](./code).
 
 ## Table of Contents
 
@@ -50,9 +52,9 @@ There are three key characteristics of the service:
 
 The OCI Generative AI Service works by following the steps below:
 
-1. Users provide text in natural language via a prompt (e.g: "Describe what is OCI GenAI Service?")
+1. Users provide text in a natural language prompt (e.g: "Describe what is OCI GenAI Service?")
 2. The GenAI service processes the input to generate, summarize, transform, extract information or classify text.
-3. The response generated is sent back to the user.
+3. The generated response is sent back to the user.
 
 ### Pre-trained Foundational Models
 
@@ -87,7 +89,49 @@ The GPUs allocated for a given customer's Generative AI tasks are isolated from 
 
 ## Chat Models
 
-<!-- Explanation of conversational AI models and how they are deployed or used within OCI Generative AI. -->
+### Tokens
+
+Language models understand tokens rather than characters, where one token can be a part of a word, an entire word or
+punctuation.
+
+For instance, a common word such as "_apple_" is a single token, while another word such as "_friendship_" is made
+up of two tokens: "_friend_" and "_ship_". Hence, the number of tokens per word dependes on the complexity of the text.
+
+So, simple words generally average one token, while complex words can be compose from 2-3 tokens per word.
+
+Furthermore, a _**tokenizer**_ is a component that takes a sentence in natural language and breaks it down into
+multiple tokens.
+![Sentence tokens](./images/sentence_tokens.png)
+
+## Pre-trained Chat Models
+
+Here is an overview of the available pre-trained Chat Models in the OCI Generative AI service:
+
+![Pre-trained chat models](./images/pretrained_chat_models.png)
+
+## Model Inference Parameters
+
+Inference parameters can change the pool of possible outputs that the model considers during response generation, or
+they can also limit the final response
+
+Some of the chat model inference parameters in OCI Generative AI are:
+
+* **Maximum Output Tokens**: as stated, it is the maximum amount of tokens that the model generates per response (up to
+  4,000 in OCI).
+* **Preamble Override**: An initial guideline message that can change the model's overall chat behavior and conversation
+  style, the system prompt.
+* **Temperature**: a hyperparameter that controls the randomness of the output. Higher values enable the model to
+  generate more creative
+  outputs, while low temperature values have more deterministic and predictable outputs.
+* **Top k**: ensures that only the top k most likely tokens are considered in the response generation process at each
+  step. ![Top-k sampling](./images/top_k_sampling.png)
+* **Top p**: ensures that only the most likely tokens with the sum p of their probabilities are considered for
+  generation at each step. ![Top-p sampling](./images/top_p_sampling.png)
+* **Frequency Penalty**: penalizes tokens that have already appeared in the preceding text (including the prompt), and
+  scales based on how many times the token has appeared.
+* **Presence Penalty**: applies a penalty if the token has appeared at least once before.
+
+
 
 ## Embedding Models
 

@@ -1,0 +1,1 @@
+marimo export script notebooks/gen_ai_inference_api.py -o scripts/gen_ai_inference_api_script.py

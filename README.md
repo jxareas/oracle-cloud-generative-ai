@@ -22,7 +22,7 @@
   </p>
 </div>
 
-This repository contains my scripts, answers & solutions to the Oracle MyLearn Training for the Oracle Cloud
+This repository contains the scripts, answers & solutions to the Oracle MyLearn Training for the Oracle Cloud
 Infrastructure (OCI) Generative AI Professional Certification.
 
 ## ⏳ Progress ⏳
