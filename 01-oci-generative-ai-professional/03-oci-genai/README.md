@@ -26,8 +26,8 @@ Similarly, you can find the Module Labs at [`./code`](./code).
 2. [Chat Models](#chat-models)
 3. [Embedding Models](#embedding-models)
 4. [Prompt Engineering](#prompt-engineering)
-5. [Dedicated AI Clusters](#dedicated-ai-clusters)
-6. [Fine Tuning](#fine-tuning)
+5. [Fine Tuning](#fine-tuning)
+6. [Dedicated AI Clusters](#dedicated-ai-clusters)
 7. [OCI Generative AI Security](#oci-generative-ai-security)
 
 ---
@@ -62,10 +62,14 @@ In OCI GenAI, there are two types of pre-trained foundational models: chat model
 
 ![OCI GenAI pre-trained foundational models](./images/oci_genai_pretrained_models.png)
 
-### Fine-tuning
+### Foundational models and fine-tuning
 
 OCI GenAI allows for tine-tuning, which optimizes pre-trained foundational models on smaller domain-specific data to
-create customized models. The two main benefits of the fine-tuning process are:
+create customized models.
+
+![OCI GenAI fine-tuning](./images/oci_genai_fine_tuning.png)
+
+The two main benefits of the fine-tuning process are:
 
 - **_Improved model performance_** on domain-specific tasks.
 - **_Increased model efficiency_** by reducing the token usage.
@@ -73,7 +77,7 @@ create customized models. The two main benefits of the fine-tuning process are:
 The OCI Generative AI Service enables T-Few fine-tuning a PEFT (_parameter efficient fine-tuning_) which enables fast
 and efficient model training, that updates only a fraction of the model's weights.
 
-![OCI GenAI fine-tuning](./images/oci_genai_fine_tuning.png)
+![T-Few fine tuning](./images/t_few_fine_tuning.png)
 
 ### Dedicated AI Clusters
 
@@ -131,23 +135,132 @@ Some of the chat model inference parameters in OCI Generative AI are:
   scales based on how many times the token has appeared.
 * **Presence Penalty**: applies a penalty if the token has appeared at least once before.
 
-
-
 ## Embedding Models
 
-<!-- Description of embedding models for semantic understanding, search, and recommendation use cases. -->
+### Embeddings
+
+Embeddings are a numerical representation of text converted into sequences of numbers (vectors).
+
+A piece of text could be a word, a phrase, sentence or several paragraphs.
+
+The embedding vectors help capture the semantic meaning of text and enable varios natural language processing tasks such
+as semantic search, text classification and clustering.
+
+![Encoder generating embeddings](./images/encoder_embeddings.png)
+
+### Semantic Similarity
+
+Cosine and dot product can be used to compute the numerical similarity between two embedding vectors.
+
+Note that embeddings which are numerically similar are also semantically similar.
+
+![Semantically similar words in two dimensions](./images/semantic_similarity.png)
+
+### Use cases
+
+Some of the use cases for embedding models and embedding vectors are:
+
+- Vector Search: Embeddings enable vector search, where the search function focuses on the meaning of text (
+  semantic search) rather than keywords (lexical search).
+- Text Classification: Embeddings help classify and label text based on their semantic similarity.
+- Clustering: Embeddings also allow use to cluster similar text based on techniques such as dimensionality reduction and
+  clustering using the embedding vectors.
+- RAG: Retrieval augmentation enhances generative models by integrating them with retrieval systems, allowing them to
+  fetch contextually relevant information at query time, and generate more accurate and grounded responses.
+
+![Retrieval-Augmented Generation Pipeline](./images/rag_pipeline.png)
+
+### Embedding Models in OCI Generative AI
+
+The embedding models available in OCI Generative AI service include the following Cohere models:
+
+![OCI GenAI Embedding Models](images/oci_genai_embedding_models.png)
 
 ## Prompt Engineering
 
-<!-- Techniques and best practices for crafting effective prompts to improve model performance. -->
+In the context of language models:
 
-## Dedicated AI Clusters
+- A **prompt** refers to the initial input or text provided to the language model.
+- **Prompt Engineering**: it is the process of iteratively refining a prompt in order to elicit a particular style of
+  response in the language model.
 
-<!-- Information about OCI’s infrastructure for running high-performance, isolated AI workloads. -->
+![Language model prompting](./images/language_model_prompt.png)
+
+Note that language models can be seen as next-word predictors (or well, tokens), and the way they work is by basically
+predicting the next series of tokens that is likely to follow from the previous text.
+![Language model prediction](./images/llms_next_word_predictors.png)
+
+### In-context learning
+
+**_In-context learning_**is the process of conditioning (by prompting) a language model with instructions and or
+demonstrations of the task it is meant to complete.
+
+Bear in mind, this is not learning in the traditional sense, as none
+of the models weights are being adjusted.
+
+### K-shot prompting / Few-shot prompting
+
+_K-shot prompting_** is the prompt engineering technique of providing _k_ examples of the intended task in the prompt.
+Also known as _few-shot prompting_.
+
+It is widely believed to improve response generation over zero-shot prompting (not providing any examples within the
+input context).
+
+![Few-shot prompting](./images/prompting_few_shot.png)
+
+### Other Prompting Strategies
+
+Some other advanced prompt engineering strategies are:
+
+* **_Chain-of-thought_**: encourages the language model to generate intermediate reasoning steps before giving a final
+  answer. The language model thinks out loud through a sequence of logical steps.
+* **_Zero-shot chain-of-thought_**: Applies chain-of-thought prompting without providing examples.
 
 ## Fine Tuning
 
-<!-- Guide on customizing and refining pretrained models for specific organizational needs. -->
+Some techniques used in order to customize the behavior of a language model can be seen below:
+
+![Model Customization Techniques](./images/model_customization_comparison.png)
+
+It is possible to combine these techniques in a single combined approach:
+
+![Combined Approach](./images/model_customization_combined_approach.png)
+
+### Fine-tuning and model inference in OCI GenAI
+
+A model is fine-tuned by taking a pretrained foundational model and providing additional training using custom data.
+
+In machine learning, model inference refers to the process of using a trained machine learning model to make predictions
+based on new input data. In the case of language models, inference refers to the model receiving new text as input and
+generating output text based on what it has learned during training.
+
+![Fine tuning and inference](./images/fine_tuning_and_inference.png)
+
+### OCI GenAI Fine-tuning
+
+In the Oracle AI Generative AI service, we can use a custom dataset to fine-tune a foundational model and create a
+**custom model**.
+
+A typical fine-tuning workflow in OCI Generative AI, looks the following way:
+
+![OCI GenAI fine-tuning workflow](./images/oci_genai_fine_tuning_workflow.png)
+
+### OCI GenAI Inference
+
+On the other hand, it is possible to create a **model endpoint**, which serves as a designated point on a **Dedicated AI
+Cluster** where an LLM can accept user requests and send back generated responses.
+
+A typical inference workflow in OCI Generative AI looks just as shown below:
+
+![OCI GenAI inference workflow](./images/oci_genai_inference_workflow.png)
+
+## Dedicated AI Clusters
+
+In OCI GenAI, **Dedicated AI Clusters** are single-tenant deployment where the GPUs in the cluster only host your custom
+models.
+
+The cluster types is either **fine-tuning** (for training a pretrained foundational model) or **hosting** (hosts a
+custom model endpoint for inference).
 
 ## OCI Generative AI Security
 
