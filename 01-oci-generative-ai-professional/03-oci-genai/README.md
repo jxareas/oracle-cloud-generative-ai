@@ -134,6 +134,7 @@ Some of the chat model inference parameters in OCI Generative AI are:
 * **Frequency Penalty**: penalizes tokens that have already appeared in the preceding text (including the prompt), and
   scales based on how many times the token has appeared.
 * **Presence Penalty**: applies a penalty if the token has appeared at least once before.
+* **Show Likelihood**: determines how likely it would be for a token to follow the current generated token.
 
 ## Embedding Models
 
@@ -245,6 +246,28 @@ A typical fine-tuning workflow in OCI Generative AI, looks the following way:
 
 ![OCI GenAI fine-tuning workflow](./images/oci_genai_fine_tuning_workflow.png)
 
+When creating a fine-tuning workflow in OCI GenAI service, there are the following configurations available:
+
+- Training methods: fine-tuning is performed using PEFT techniques such as: T-Few or LoRA (Low-Rank Adaptation).
+- Hyperparameters: there are several hyperparameters available, such as total training epochs, learning rate, training
+  batch size, early stopping patience, early stopping threshold and log model metrics interval in steps.
+
+![OCI GenAI Fine-tuning configuration](./images/oci_genai_fine_tuning_configuration.png)
+
+The hyperparameters options, their description and valid range can be visualized in the table below:
+
+![img.png](images/oci_genai_fine_tuning_hyperparameters.png)
+
+### Evaluating fine-tuning results
+
+There are two main metrics used to understand the results of a fine-tuning process:
+
+- **Accuracy**: Measures whether the generated tokens match the annotated tokens. E.g: an accuracy of 90% means that 90%
+  of the output tokens matched the tokens in the dataset.
+- **Loss**: Loss measures how wrong the generated output of a model are (a numerical penalty for mistakes). E.g: A loss
+  of 0 means all outputs were perfect, a large loss indicates highly random outputs, loss decreases as the model
+  improves.
+
 ### OCI GenAI Inference
 
 On the other hand, it is possible to create a **model endpoint**, which serves as a designated point on a **Dedicated AI
@@ -262,6 +285,57 @@ models.
 The cluster types is either **fine-tuning** (for training a pretrained foundational model) or **hosting** (hosts a
 custom model endpoint for inference).
 
+### Unit Types
+
+There are four cluster unit types in OCI GenAI service:
+
+- Large Cohere Dedicated: fine-tuning and hosting of Cohere Command R family, supports Command R+ 08-2024, Command R+.
+- Small Cohere Dedicated: fine-tuning and hosting of Cohere Command R family, supports Comand R 08-2024, Command R.
+- Embed Cohere Dedicated: Hosting of Cohere Embed models, supports Cohere English (light) Embed v3, Cohere
+  Multilingual (light) Embed V3.
+- Large Meta Dedicated: Fine-tuning and hosting of Meta Llama models, supports Meta Llama 3.3/3.1 (70B), Meta Llama 3.2
+  11B/90B Vision, Meta Llama 3.1 (405B).
+
+### Cluster Unit Sizing
+
+![Dedicated AI Cluster Sizing](./images/dedicated_ai_cluster_sizing.png)
+
+### Cluster Unit Pricing
+
+![Dedicated AI Cluster Pricing](./images/dedicated_ai_cluster_pricing.png)
+
 ## OCI Generative AI Security
 
-<!-- Overview of OCI’s security measures, compliance, and governance for AI models and data. -->
+### Dedicated GPU and RDMA Network
+
+In OCI GenAI, security and privacy of a customer is an essential design tenet: the GPU allocated for a customer's
+generative AI tasks are isolated from other GPUs.
+
+![OCI GenAI Tenancy](./images/oci_genai_tenancy.png)
+
+On the other hand, for strong data privacy and security, a dedicated GPU cluster only handles fine-tuned models of a
+single customer.
+
+Base model + fine-tuned models endpoints share the same cluster resources for the most efficient utilization of
+underlying GPUs in the Dedicated AI Cluster. They all run under the dedicated RDMA network.
+
+![OCI GenAI Cluster Security](./images/oci_genai_dedicated_ai_cluster.png)
+
+### Customer Data and Model Isolation
+
+Customer data access is restricted within the customer's tenancy, so that one's customer's data can't be seen by another
+customer.
+
+Only a customer's application can access custom models created and hosted from within that customer's tenancy.
+
+![OCI GenAI Isolation](images/oci_genai_security_isolation.png)
+
+### OCI Security Services
+
+The OCI GenAI service also leverages other OCI Security services, such as:
+
+- Leverages OCI IAM for authentication and authorization.
+- OCI Key Management service stores base model keys securely.
+- The fine-tuned customer models weight are stored in OCI Object Storage buckets (encrypted by default).
+
+![OCI GenAI Security services](./images/oci_genai_security_services.png)
