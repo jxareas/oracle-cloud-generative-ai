@@ -27,10 +27,10 @@ Infrastructure (OCI) Generative AI Professional Certification.
 
 ## ⏳ Progress ⏳
 
-| ID | Module                                        | Progress |
-|----|-----------------------------------------------|----------|
-| 1  | Course: OCI Generative AI Professional        | :check:  |
-| 2  | Practice Exam: OCI Generative AI Professional | :check:  |
+| ID | Module                                        | Progress           |
+|----|-----------------------------------------------|--------------------|
+| 1  | Course: OCI Generative AI Professional        | :white_check_mark: |
+| 2  | Practice Exam: OCI Generative AI Professional | :white_check_mark: |
 
 ## 🚀 Modules 🚀
 
