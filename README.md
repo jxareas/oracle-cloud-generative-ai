@@ -25,6 +25,10 @@
 This repository contains the scripts, answers & solutions to the Oracle MyLearn Training for the Oracle Cloud
 Infrastructure (OCI) Generative AI Professional Certification.
 
+It also includes **supplementary materials**, such as a set
+of [📘 practice questions](./03-scraped-questions/OCI_GENAI_QUESTIONS.pdf) to help you **prepare effectively for the
+certification exam**.
+
 ## ⏳ Progress ⏳
 
 | ID | Module                                        | Progress           |
@@ -81,7 +85,7 @@ Infrastructure (OCI) Generative AI Professional Certification.
 Labs from the OCI Generative AI certification use libraries such as `langchain`, `langchain_community`, `oracledb` and
 `oci`.
 
-In this repository, dependencies are managed using the [`uv` package manager](https://docs.astral.sh/uv/). 
+In this repository, dependencies are managed using the [`uv` package manager](https://docs.astral.sh/uv/).
 
 All required
 libraries are specified in the [pyproject.toml](./pyproject.toml) file.
