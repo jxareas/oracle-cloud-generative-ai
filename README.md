@@ -78,7 +78,13 @@ Infrastructure (OCI) Generative AI Professional Certification.
 
 ## 🛠️ Requirements 🛠️
 
-TBD.
+Labs from the OCI Generative AI certification use libraries such as `langchain`, `langchain_community`, `oracledb` and
+`oci`.
+
+In this repository, dependencies are managed using the [`uv` package manager](https://docs.astral.sh/uv/). 
+
+All required
+libraries are specified in the [pyproject.toml](./pyproject.toml) file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
