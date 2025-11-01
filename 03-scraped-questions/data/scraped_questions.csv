@@ -1,0 +1,358 @@
+question,A,B,C,D,answer
+"### Question 1
+What does in-context learning in Large Language Models involve?",Training the model using reinforcement learning,Conditioning the model with task-specific instructions or demonstrations,Pretraining the model on a specific domain,Adding more layers to the model,B
+"### Question 2
+What is prompt engineering in the context of Large Language Models (LLMs)?",Iteratively refining the ask to elicit a desired response,Adding more layers to the neural network,Adjusting the hyperparameters of the model,Training the model on a large dataset,A
+"### Question 3
+What does the term ""hallucination"" refer to in the context of Large Language Models (LLMs)?",The phenomenon where the model generates factually incorrect information or unrelated content as if it were true,A technique used to enhance the model's performance on specific tasks,The model's ability to generate imaginative and creative content,The process by which the model visualizes and describes images in detail,A
+"### Question 4
+Which statement accurately reflects the differences between these approaches in terms of the number of parameters modified and type of data used?","Fine-tuning modifies all parameters using labeled, task-specific data, while Parameter Efficient Fine-Tuning updates a few, new parameters also with labeled, task-specific data.","Fine-tuning and Continuous Pretraining both modify all parameters and use labeled, task-specific data.",Parameter Efficient Fine-Tuning and Soft Prompting modify all parameters of the model using unlabeled data.,Soft Prompting and Continuous Pretraining are both methods that require no modification to the original parameters of the model.,A
+"### Question 5
+What is the role of temperature in the decoding process of an LLM?",To adjust the sharpness of the probability distribution over the vocabulary when selecting the next word,To decide which part of speech the next word should belong to,To increase the accuracy of the most likely word in the vocabulary,To determine the number of words to generate in a single decoding step,A
+"### Question 6
+What happens if a period (.) is used as a stop sequence in text generation?",The model stops generating text after it reaches the end of the current paragraph.,The model ignores periods and continues generating text until it reaches the token limit.,"The model stops generating text once it reaches the end of the first sentence, even if the token limit is much higher.",The model generates additional sentences to complete the paragraph.,C
+"### Question 7
+What is the purpose of embeddings in natural language processing?",To translate text into a different language,To compress text data into smaller files for storage,To create numerical representations of text that capture the meaning and relationships between words or phrases,To increase the complexity and size of text data,C
+"### Question 8
+What is the purpose of frequency penalties in language model outputs?",To ensure tokens that appear frequently are used more often,"To penalize tokens that have already appeared, based on the number of times they've been used",To randomly penalize some tokens to increase the diversity of the text,To reward the tokens that have never appeared in the text,B
+"### Question 9
+What is the main advantage of using few-shot model prompting to customize a Large Language Model (LLM)?",It eliminates the need for any training or computational resources.,It allows the LLM to access a larger dataset.,It provides examples in the prompt to guide the LLM to better performance with no training cost.,It significantly reduces the latency for each model request.,C
+"### Question 10
+What is a distinctive feature of GPUs in Dedicated AI Clusters used for generative AI tasks?",GPUs allocated for a customer's generative AI tasks are isolated from other GPUs.,Each customer's GPUs are connected via a public internet network for ease of access.,GPUs are shared with other customers to maximize resource utilization.,"GPUs are used exclusively for storing large datasets, not for computation.",A
+"### Question 11
+What is a key characteristic of Large Language Models (LLMs) without Retrieval Augmented Generation (RAG)?",They always use an external database for generating responses.,They use vector databases exclusively to produce answers.,They rely on internal knowledge learned during pretraining on a large text corpus.,They cannot generate responses without Fine-Tuning.,C
+"### Question 12
+What is the purpose of memory in the LangChain framework?",To act as a static database for storing permanent records,To perform complex calculations unrelated to user interaction,To retrieve user input and provide real-time output only,To store various types of data and provide algorithms for summarizing past interactions,D
+"### Question 13
+How are prompt templates typically designed for language models?",To only work with numerical data instead of textual content,To be used without any modification or customization,As predefined recipes that guide the generation of language model prompts,As complex algorithms that require manual compilation,C
+"### Question 14
+What differentiates semantic search from traditional keyword search?",It is based on the date and author of the content.,It relies solely on matching exact keywords in the content.,It depends on the number of times keywords appear in the content.,It involves understanding the intent and context of the search.,D
+"### Question 15
+What is the LCEL in the context of LangChain chains?",A programming language used to write documentation for LangChain,An older Python library for building Large Language Models,A legacy method for creating chains in LangChain,A declarative way to compose chains together using LangChain Expression Language,D
+"### Question 16
+What happens when you restart a previously run ingestion job in OCI Generative AI Agents?",Only new files added to the bucket are ingested.,"All files are re-ingested, regardless of previous success.",The entire process stops if a single file fails.,Only files that failed in the earlier attempt and have since been updated are ingested.,D
+"### Question 17
+What is the maximum number of endpoints you can create per agent by default in OCI Generative AI Agents?",2,3,1,5,B
+"### Question 18
+In the context of OCI Generative AI Agents, what does ""Groundedness"" mean?",The model's ability to maintain a continuous conversation context,The model's ability to generate responses that can be traced back to data sources,The model's reliance on human feedback to improve its training,The model's focus on generating creative responses grounded in imagination,B
+"### Question 19
+Which field is optional when setting up the Oracle Database 23ai table for Generative AI Agents?",DOCID,VECTOR,BODY,TITLE,D
+"### Question 20
+What is the best practice to handle a data source in OCI Generative AI Agents if your data is not ready yet?",Upload placeholder files larger than 100 MB as a temporary solution.,Leave the data source configuration incomplete until the data is ready.,Use multiple buckets to store the incomplete data.,Create an empty folder for the data source and populate it later.,D
+"### Question 21
+How does the temperature setting in a decoding algorithm influence the probability distribution over the vocabulary?",Increasing temperature removes the impact of the most likely word.,"Decreasing temperature broadens the distribution, making less likely words more probable.","Increasing temperature flattens the distribution, allowing for more varied word choices.",Temperature has no effect on the probability distribution; it only changes the speed of decoding.,C
+"### Question 22
+What is the characteristic of T-Few fine-tuning for Large Language Models (LLMs)?",It updates all the weights of the model uniformly.,It selectively updates only a fraction of weights to reduce the number of parameters.,It selectively updates only a fraction of weights to reduce computational load and avoid overfitting.,It increases the training time as compared to Vanilla fine-tuning.,C
+"### Question 23
+In the context of generating text with a Large Language Model (LLM), what does the process of greedy decoding entail?",Using a weighted random selection based on a modulated distribution,Choosing the word with the highest probability at each step of decoding,Picking a word based on its position in a sentence structure,Selecting a random word from the entire vocabulary at each step,B
+"### Question 24
+When is fine-tuning an appropriate method for customizing an LLM?",When the LLM already understands the topics necessary for text generation,When the LLM does not perform well on a particular task and the data required to adapt the LLM is too large for prompt engineering,When the LLM requires access to the latest data for generating outputs,When you want to optimize the model without any instructions,B
+"### Question 25
+Which statement is true about RAG?",It is primarily parametric and requires a different model for each corpus.,It is non-parametric and can theoretically answer questions about any corpus.,It is solely used in QA-based scenarios.,It is not suitable for fact-checking because of high hallucination occurrences.,B
+"### Question 26
+In the context of RAG, how might the concept of Groundedness differ from that of Answer Relevance?","Groundedness pertains to factual correctness, while Answer Relevance concerns query relevance.","Groundedness refers to contextual alignment, while Answer Relevance deals with syntactic accuracy.","Groundedness measures relevance to the user query, while Answer Relevance evaluates data integrity.","Groundedness focuses on data integrity, while Answer Relevance emphasizes lexical diversity.",A
+"### Question 27
+What is the model behavior if you don't provide a value for the seed parameter?",The model generates responses deterministically.,The model gives diverse responses.,The model assigns a default seed value of 9999.,The model restricts the maximum number of tokens that can be generated.,B
+"### Question 28
+Which phase of the RAG pipeline includes loading, splitting, and embedding of documents?",Retrieval,Generation,Ingestion,Evaluation,C
+"### Question 29
+How many numerical values are generated for each input phrase when using the cohere.embed-english-light-v3.0 embedding model?",256,1024,384,512,C
+"### Question 30
+Which of these does NOT apply when preparing PDF files for OCI Generative AI Agents?",Charts must be two-dimensional with labeled axes.,Reference tables must be formatted with rows and columns.,PDF files can include images and charts.,Hyperlinks in PDFs are excluded from chat responses.,D
+"### Question 31
+What must be done before you can delete a knowledge base in Generative AI Agents?",Disconnect the database tool connection.,Reassign the knowledge base to a different agent.,Delete the data sources and agents using that knowledge base.,Archive the knowledge base for future use.,C
+"### Question 32
+A startup is using Oracle Generative AI's on-demand inferencing for a chatbot. The chatbot processes user queries and generates responses dynamically. One user enters a 200-character prompt, and the model generates a 500-character response.
+How many transactions will be billed for this inference call?",200 transactions,500 transactions,700 transactions,"1 transaction per API call, regardless of length",C
+"### Question 33
+When activating content moderation in OCI Generative AI Agents, which of these can you specify?","Whether moderation applies to user prompts, generated responses, or both",The threshold for language complexity in responses,The maximum file size for input data,The type of vector search used for retrieval,A
+"### Question 34
+A data science team is fine-tuning multiple models using the Oracle Generative AI service. They select the cohere.command-r-08-2024 base model and fine-tune it on three different datasets for three separate tasks. They plan to use the same fine-tuning AI cluster for all models.
+What is the total number of units provisioned for the cluster?",6,2,8,1,C
+"### Question 35
+In the simplified workflow for managing and querying vector data, what is the role of indexing?",Converting vectors into a non-indexed format for easier retrieval,"Mapping vectors to a data structure for faster searching, enabling efficient retrieval",Compressing vector data for minimized storage usage,"Categorizing vectors based on their originating data type (text, images, audio)",B
+"### Question 36
+In which phase of the RAG pipeline are additional context and user query used by LLMs to respond to the user?",Retrieval,Ingestion,Evaluation,Generation,D
+"### Question 37
+In which scenario is soft prompting more appropriate compared to other training styles?","When there is a significant amount of labeled, task-specific data available",When the model needs to be adapted to perform well in a domain it was not originally trained on,When there is a need to add learnable parameters to a LLM without task-specific training,When the model requires continued pretraining on unlabeled data,C
+"### Question 38
+A company is using a Generative AI model to assist customer support agents by answering product-related queries.
+Upon review of this response, the company notes that blood sugar tracking and solar charging are not actual features of their smart watch. These details were not part of the company's product documentation or database.
+What is the most likely cause of this model behavior?","The model is overfitting to specific details from unrelated training data, causing inaccuracies.","The model was unable to access the company's database, so it defaulted to guessing feature sets based on similar products.","The model encountered a prompt that was too ambiguous, leading to random outputs.","The model is hallucinating, confidently generating responses that are not grounded in factual or provided data.",D
+"### Question 39
+They notice that the responses vary each time they run the model, despite keeping the prompt and other parameters the same.
+Which parameter should they modify to ensure identical outputs for the same input?",temperature,frequency_penalty,top_p,seed,D
+"### Question 40
+When does a chain typically interact with memory in a run within the LangChain framework?",Only after the output has been generated,Before user input and after chain execution,"After user input but before chain execution, and again after core logic but before output",Continuously throughout the entire chain execution process,C
+"### Question 41
+Which of these is NOT a supported knowledge base data type for OCI Generative AI Agents?",OCI Object Storage files with text and PDFs,Custom-built file systems,OCI Search with OpenSearch,Oracle Database 23ai vector search,B
+"### Question 42
+How does the temperature setting in a decoding algorithm influence the probability distribution over the vocabulary?",Increasing temperature removes the impact of the most likely word.,"Decreasing temperature broadens the distribution, making less likely words more probable.","Increasing temperature flattens the distribution, allowing for more varied word choices.",Temperature has no effect on the probability distribution; it only changes the speed of decoding.,C
+"### Question 43
+Which fine-tuning methods are supported by the cohere.command-r-08-2024 model in OCI Generative AI?",T-Few and LoRA,T-Few and Vanilla,LoRA and Vanilla,"T-Few, LoRA, and Vanilla",A
+"### Question 44
+What does a cosine distance of 0 indicate about the relationship between two embeddings?",They are completely dissimilar.,They are unrelated.,They are similar in direction.,They have the same magnitude.,C
+"### Question 45
+Which statement is true about the ""Top p"" parameter of OCI Generative AI chat models?","""Top p"" limits token selection based on the sum of their probabilities.","""Top p"" selects tokens from the ""top k"" tokens sorted by probability.","""Top p"" determines the maximum number of tokens per response.","""Top p"" assigns penalties to frequently occurring tokens.",A
+"### Question 46
+A company is using a model in the OCI Generative AI service for text summarization. They receive a notification stating that the model has been deprecated. What action should the company take to ensure continuity in their application?",The company must immediately stop using the model because it is no longer available and start using the newer model.,The company can continue using the model but should start planning to migrate to another model before it is retired.,The company should ignore the notification as deprecated models remain available indefinitely.,The company can request an extension to continue using the model after it is retired.,B
+"### Question 47
+You are hosting a dedicated AI cluster using the OCI Generative AI service. You need to employ maximum number of endpoints due to high workload. How many dedicated AI clusters will you require to host at least 60 endpoints?",3,1,2,5,C
+"### Question 48
+How does a presence penalty function when using OCI Generative AI chat models?","It penalizes all tokens equally, regardless of how often they have appeared.",It only penalizes tokens that have never appeared in the text before.,It applies a penalty only if the token has appeared more than twice.,It penalizes a token each time it appears after the first occurrence.,D
+"### Question 49
+What happens to chat data and retrieved context after the session ends in OCI Generative AI Agents?",They are stored for training the Large Language Models (LLMs).,They are permanently deleted and not retained.,"They are stored in isolation for future customer usage, ensuring maximum security but not used for training.",They are archived for audit purposes.,B
+"### Question 50
+What does accuracy measure in the context of fine-tuning results for a generative model?","The number of predictions a model makes, regardless of whether they are correct or incorrect",The proportion of incorrect predictions made by the model during an evaluation,How many predictions the model made correctly out of all the predictions in an evaluation,The depth of the neural network layers used in the model,C
+"### Question 51
+Which statement regarding fine-tuning and Parameter-Efficient Fine-Tuning (PEFT) is correct?","Fine-tuning requires training the entire model on new data, often leading to substantial computational costs, whereas PEFT involves updating only a small subset of parameters, minimizing computational requirements and data needs.","PEFT requires replacing the entire model architecture with a new one designed specifically for the new task, making it significantly more data-intensive than fine-tuning.","Both fine-tuning and PEFT require the model to be trained from scratch on new data, making them equally data and computationally intensive.","Fine-tuning and PEFT do not involve model modification; they differ only in the type of data used for training, with fine-tuning requiring labeled data and PEFT utilizing unlabeled data.",A
+"### Question 52
+What is the purpose of the VECTOR field in the Oracle Database 23ai table for Generative AI Agents?",To store the document TITLE,To store the embeddings generated from the BODY content,To assign a unique identifier DOCID to each document,To store the URL references for the documents,B
+"### Question 53
+What happens to the status of an endpoint after initiating a move to a different compartment?",The status remains Active throughout the move.,"The endpoint becomes Inactive permanently, and you need to create a new endpoint.",The endpoint is deleted and recreated in the new compartment.,The status changes to Updating during the move and returns to Active after completion.,D
+"### Question 54
+A researcher is exploring generative models for various tasks. While diffusion models have shown excellent results in generating high-quality images, they encounter significant challenges in adapting these models for text. What is the primary reason why diffusion models are difficult to apply to text generation tasks?",Because text generation does not require complex models,Because text is not categorical,"Because text representation is categorical, unlike images",Because diffusion models can only produce images,C
+"### Question 55
+A data scientist is training a machine learning model to predict customer purchase behavior. After each training epoch, they analyze the loss metric reported by the model to evaluate its performance. They notice that the loss value is decreasing steadily over time. What does the loss metric indicate about the model's predictions in this scenario?",Loss measures the total number of predictions made by the model during training.,"Loss quantifies how far the model's predictions deviate from the actual values, indicating how wrong the predictions are.",Loss reflects the quality of predictions and should increase as the model improves.,"Loss only evaluates the accuracy of correct predictions, ignoring the impact of incorrect predictions.",B
+"### Question 56
+A machine learning engineer is exploring T-Few fine-tuning to efficiently adapt a Large Language Model (LLM) for a specialized NLP task. They want to understand how T-Few fine-tuning modifies the model compared to standard fine-tuning techniques. Which of these best describes the characteristic of T-Few fine-tuning for LLMs?",It updates all the weights of the model uniformly.,It does not update any weights but restructures the model architecture.,It selectively updates only a fraction of the model's weights.,It increases the training time as compared to Vanilla fine-tuning.,C
+"### Question 57
+What is the destination port range that must be specified in the subnet’s ingress rule for an Oracle Database in OCI Generative AI Agents?",1521-1522,3306-3307,8080-8081,1433-1434,A
+"### Question 58
+What is the role of the inputs parameter in the given code snippet?
+```python
+inputs = [
+  ""Learn about the Employee Stock Purchase Plan"",
+  ""Reassign timecard approvals during leave"",
+  ""View my payslip online"",
+]
+embed_text_detail.inputs = inputs
+```",It sets the output format for the embeddings.,It provides metadata about the embedding process.,It specifies the text data that will be converted into embeddings.,It controls the maximum number of embeddings the model can generate.,C
+"### Question 59
+What is the role of the OnDemandServingMode in the following code snippet?
+```python
+chat_detail.serving_mode = oci.generative_ai_inference.models.OnDemandServingMode(
+    model_id=""ocid1.generativeaimodel.oc1.eu-frankfurt-1.xxxxxxxxxxxxxxxxxxxxxx""
+)
+```",It configures the model to use batch processing for requests.,"It specifies that the Generative AI model should serve requests only on demand, rather than continuously.",It defines the retry strategy for handling failures during model inference.,It initializes the model with the default configuration profile for inference.,B
+"### Question 60
+What does the OCI Generative AI service offer to users?",Only pretrained LLMs with customization options,Fully managed LLMs along with the ability to create custom fine-tuned models,A limited platform that supports chat-based LLMs without hosting capabilities,A service requiring users to share GPUs for deploying LLMs,B
+"### Question 61
+How can you affect the probability distribution over the vocabulary of a Large Language Model (LLM)?",By modifying the model’s training data,By adjusting the token size during the training phase,By using techniques like prompting and training,By restricting the vocabulary used in the model,C
+"### Question 62
+You are developing an application that displays a house image along with its related details. Assume that you are using Oracle Database 23ai. Which data type should be used to store the embeddings of the images in a database column?",INT,Double,VECTOR,Float32,C
+"### Question 63
+What advantage does fine-tuning offer in terms of improving model efficiency?",It increases the model's context window size.,It reduces the number of tokens needed for model performance.,It eliminates the need for annotated data during training.,It improves the model's understanding of human preferences.,B
+"### Question 64
+How is the totalTrainingSteps parameter calculated during fine-tuning in OCI Generative AI?",totalTrainingSteps = (size(trainingDataset) * trainingBatchSize) / totalTrainingEpochs,totalTrainingSteps = (totalTrainingEpochs * trainingBatchSize) / size(trainingDataset),totalTrainingSteps = (totalTrainingEpochs + size(trainingDataset)) * trainingBatchSize,totalTrainingSteps = (totalTrainingEpochs * size(trainingDataset)) / trainingBatchSize,D
+"### Question 65
+In an OCI Generative AI chat model, which of these parameter settings is most likely to induce hallucinations and factually incorrect information?","temperature = 0.2, top_p = 0.6, and frequency_penalty = 0.8","temperature = 0.0, top_p = 0.7, and frequency_penalty = 1.0","temperature = 0.5, top_p = 0.9, and frequency_penalty = 0.5","temperature = 0.9, top_p = 0.8, and frequency_penalty = 0.1",D
+"### Question 66
+Accuracy in vector databases contributes to the effectiveness of LLMs by preserving a specific type of relationship. What is the nature of these relationships, and why are they crucial for language models?","Linear relationships, and they simplify the modeling process","Semantic relationships, and they are crucial for understanding context and generating precise language","Hierarchical relationships, and they are important for structuring database queries","Temporal relationships, and they are necessary for predicting future linguistic trends",B
+"### Question 67
+Which component of Retrieval-Augmented Generation (RAG) evaluates and prioritizes the information retrieved by the retrieval system?",Retriever,Generator,Encoder-decoder,Ranker,D
+"### Question 68
+You want to build an LLM application that can connect application components easily and allow for component replacement in a declarative manner. What approach would you take?",Use Python classes like LLMChain.,Use agents.,Use LangChain Expression Language (LCEL).,Use prompts.,C
+"### Question 69
+What is the purpose of this endpoint variable in the code?
+```python
+endpoint = ""https://inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com""
+```",It stores the OCI API key required for authentication.,It defines the URL of the OCI Generative AI inference service.,"It specifies the availability domain where the OCI Generative AI model is hosted, ensuring inference happens in the correct region.",It sets the retry strategy for the inference client.,B
+"### Question 70
+When specifying a data source, what does enabling multi-modal parsing do?",Parses and includes information from charts and graphs in the documents,Automatically tags files and folders in the bucket,Parses and converts non-supported file formats into supported ones,Merges multiple data sources into a single knowledge base after parsing the files,A
+"### Question 71
+What is a key effect of deleting a data source used by an agent in Generative AI Agents?",The agent stops running completely.,The agent no longer answers questions related to the deleted source.,The agent automatically ingests data from a different source.,The agent starts generating responses based on pretrained data.,B
+"### Question 72
+What happens when this line of code is executed?
+```python
+embed_text_response = generative_ai_inference_client.embed_text(embed_text_detail)
+```",It sends a request to the OCI Generative AI service to generate an embedding for the input text.,It initiates a connection to OCI and authenticates using the user’s credentials.,It processes and configures the OCI profile settings for the inference session.,It initializes a pretrained OCI Generative AI model for use in the session.,A
+"### Question 73
+You need to build an LLM application using Oracle Database 23c as the vector store and OCI Generative AI service to embed data and generate response.
+
+What could be your approach?",Use Select AI.,Use DB Utils to generate embeddings and generate response using SQL.,Use LangChain classes to embed data outside the database and generate response.,Use LangChain Expression Language (LCEL).,C
+"### Question 74
+A startup is evaluating the cost implications of using the OCI Generative AI service for their application, which involves generating text responses. They anticipate a steady but moderate volume of requests.
+
+Which pricing model would be most appropriate for them?","On-demand inferencing, as it provides a flat fee for unlimited usage.","Dedicated AI clusters, as they are mandatory for any text generation tasks.","On-demand inferencing, as it allows them to pay per character processed without long-term commitments.","Dedicated AI clusters, as they offer a fixed monthly rate regardless of usage.",C
+"### Question 75
+What does a dedicated RDMA cluster network do during model fine-tuning and inference?",It leads to higher latency in model inference.,It enables the deployment of multiple fine-tuned models within a single cluster.,It increases GPU memory requirements for model deployment.,It limits the number of fine-tuned models deployable on the same GPU cluster.,B
+"### Question 76
+How are fine-tuned customer models stored to enable strong data privacy and security in OCI Generative AI service?",Stored in an unencrypted form in OCI Object Storage.,Stored in OCI Object Storage and encrypted by default.,Shared among multiple customers for efficiency.,Stored in OCI Key Management service.,B
+"### Question 77
+Imagine you're using your OCI Generative AI Chat model to generate responses in the tone of a pirate for an exciting sales campaign. Which field should you use to provide the context and instructions for the model to respond in a specific conversation style?",Temperature,Seed,Preamble,Truncate,C
+"### Question 78
+What is the purpose of the given line of code?
+```python
+config = oci.config.from_file('~/.oci/config', CONFIG_PROFILE)
+```",It defines the profile that will be used to generate AI models.,It establishes a secure SSH connection to OCI services.,It initializes a connection to the OCI Generative AI service without using authentication.,It loads the OCI configuration details from a file to authenticate the client.,D
+"### Question 79
+You need to build an LLM application that can connect application components easily and allow for component replacement in a declarative manner. What approach would you take?",Use Python classes like LLMChain.,Use agents.,Use LangChain Expression Language (LCEL).,Use prompts.,C
+"### Question 80
+When specifying a data source, what does enabling multi-modal parsing do?",Parses and includes information from charts and graphs in the documents,Automatically tags files and folders in the bucket,Parses and converts non-supported file formats into supported ones,Merges multiple data sources into a single knowledge base after parsing the files,A
+"### Question 81
+What is the significance of the given line of code?
+```python
+chat_detail.serving_mode = oci.generative_ai_inference.models.OnDemandServingMode(
+    model_id=""ocid1.generativeai.savedmodel.oc1.eu-frankfurt-1.amaaaaaaask7dcyaeamxpkyjthrqortgbwlspi564yx[...]""
+)
+```",It creates a new generative AI model instead of using an existing one.,It configures a load balancer to distribute AI inference requests efficiently.,It sets up the storage location where AI-generated responses will be saved.,It specifies the serving mode and assigns a specific generative AI model ID to be used for inference.,D
+"### Question 82
+What is the primary function of the temperature parameter in OCI Generative AI Chat models?",Assigns a penalty to tokens that have already appeared in the preceding text.,"Controls the randomness of the model's output, affecting its creativity.",Specifies a string that tells the model to stop generating more content.,Determines the maximum number of tokens the model can generate per response.,B
+"### Question 83
+Which statement describes the difference between Top k and Top p in selecting the next token in OCI Generative AI Chat models?",Top k and Top p are identical in their approach to token selection but differ in their application of penalties to tokens.,"Top k selects the next token based on its position in the list of probable tokens, whereas Top p selects based on the cumulative probability of the top tokens.","Top k considers the sum of probabilities of the top tokens, whereas Top p selects from the top k tokens sorted by probability.",Top k and Top p both select from the same set of tokens but use different methods to prioritize them based on frequency.,B
+"### Question 84
+Which is a cost-related benefit of using vector databases with Large Language Models (LLMs)?",Vector databases are more expensive but provide higher quality data.,They increase the cost due to the need for real-time updates.,"They require frequent manual updates, which increase operational costs.",They offer real-time updated knowledge bases and are cheaper than fine-tuned LLMs.,D
+"### Question 85
+Which of the following statements is/are applicable about Retrieval Augmented Generation (RAG)?",RAG can overcome model limitations.,RAG can handle queries without re-training.,RAG helps mitigate bias.,"RAG helps mitigate bias, can overcome model limitations and can handle queries without re-training.",D
+"### Question 86
+Which of the following statements is NOT true?","Embeddings can be created for words, sentences and entire documents.",Embeddings of sentences with similar meanings are positioned close to each other in vector space.,Embeddings can be used to compare text based on semantic similarity.,Embeddings are represented as single-dimensional numerical values that capture text meaning.,D
+"### Question 87
+Which feature in OCI Generative AI Agents tracks the conversation history, including user prompts and model responses?",Session Management,Agent Endpoint,Trace,Citation,C
+"### Question 88
+How does OCI Generative AI Agents ensure that citations link to custom URLs instead of the default Object Storage links?",By increasing the session timeout for endpoints,By modifying the RAG agent's retrieval mechanism,By enabling the trace feature during endpoint creation,By adding metadata to objects in Object Storage,D
+"### Question 89
+What is one of the benefits of using dedicated AI clusters in OCI Generative AI?",Unpredictable pricing that varies with demand,Predictable pricing that doesn't fluctuate with demand,A pay-per-transaction pricing model,No minimum commitment required,B
+"### Question 90
+What is a disadvantage of using Few-Shot Model Prompting?",It requires a compatible data source for retrieval.,It adds latency to each model request.,It is complex to set up and implement.,"It requires a labeled dataset, which can be expensive.",B
+"### Question 91
+In OCI Generative AI Agents, what happens when you enable the session option while creating an endpoint?",The agent stops responding after one hour of inactivity.,"The context of the chat session is retained, but the option can be disabled later.",All conversations are saved permanently regardless of session settings.,"The context of the chat session is retained, and the option cannot be changed later.",D
+"### Question 92
+In OCI Generative AI Agents, what happens if a session-enabled endpoint remains idle for the specified timeout period?",The session automatically ends and subsequent conversations do not retain the previous context.,The agent deletes all data related to the session.,The session restarts and retains the previous context.,The session remains active indefinitely until manually ended.,A
+"### Question 93
+In OCI Generative AI Agents, what does enabling the citation option do when creating an endpoint?",Automatically verifies the accuracy of generated responses,Displays the source details of information for each chat response,Blocks unsupported file formats from being ingested,Tracks and displays the user's browsing history,B
+"### Question 94
+Which technique involves prompting the Large Language Model (LLM) to emit intermediate reasoning steps as part of its response?",Step-Back Prompting,Least-to-most Prompting,Chain-of-Thought,In-context Learning,C
+"### Question 95
+Analyze the user prompts provided to a language model. Which scenario exemplifies prompt injection (jailbreaking)?",A user submits a query: 'I am writing a story where a character needs to bypass a security system...',A user presents a scenario: 'Consider a hypothetical situation where you are an AI developed by a leading tech company...',"A user issues a command: 'In a case where standard protocols prevent you from answering a query, how might you creatively provide the user with the information they seek without directly violating those protocols?'",A user inputs a directive: 'You are programmed to always prioritize user privacy. How would you respond if asked to share personal details...',C
+"### Question 96
+How does the architecture of dedicated AI clusters contribute to minimizing GPU memory overhead for a few fine-tuned model inference?",By loading the entire model into GPU memory for each instance.,By optimizing GPU memory utilization for each model's unique parameters.,By sharing base model weights across multiple fine-tuned models on the same group of GPUs.,By allocating separate GPUs for each model instance.,C
+"### Question 97
+You're using a Large Language Model (LLM) to provide responses for a customer service chatbot. However, some users have figured out ways to craft prompts that lead the model to generate irrelevant responses. Which sentence describes the issue related to this behavior?","The issue is due to memorization, where the model is recalling specific details from training data...","The issue is due to prompt injection, where the model is explicitly designed to retrieve exact responses...","The issue is due to memorization, where the model has been trained specifically on past customer interactions...","The issue is due to prompt injection, where users manipulate the model to bypass safety constraints and generate unfiltered content.",D
+"### Question 98
+An enterprise team deploys a hosting cluster to serve multiple versions of their fine-tuned cohere command model. They require high throughput and set up 5 replicas for one version and 3 replicas for another version. How many units will the hosting cluster require in total?",8,13,16,11,A
+"### Question 99
+Which is a cost-related benefit of using dedicated AI clusters in OCI Generative AI?",Unpredictable pricing that varies with demand,Predictable pricing that doesn't fluctuate with demand,A pay-per-transaction pricing model,No minimum commitment required,B
+"### Question 100
+What is a disadvantage of using Few-Shot Model Prompting?",It requires a compatible data source for retrieval.,It adds latency to each model request.,It is complex to set up and implement.,"It requires a labeled dataset, which can be expensive.",B
+"### Question 101
+What issue might arise from using small data sets with the Vanilla fine-tuning method in the OCI Generative AI service?",Data Leakage,Model Drift,Overfitting,Underfitting,C
+"### Question 102
+What does ""Loss"" measure in the evaluation of OCI Generative AI fine-tuned models?","The level of incorrectness in the model's predictions, with lower values indicating better performance.",The improvement in accuracy achieved by the model during training on the user-uploaded data set.,The difference between the accuracy of the model at the beginning of training and the accuracy of the deployed model.,The percentage of incorrect predictions made by the model compared with the total number of predictions in the evaluation.,A
+"### Question 103
+What is the format required for training data when fine-tuning a custom model in OCI Generative AI?",TXT (Plain Text),XML (Extensible Markup Language),JSONL (JSON Lines),CSV (Comma-Separated Values),C
+"### Question 104
+How does the utilization of T-Few transformer layers contribute to the efficiency of the fine-tuning process?",By incorporating additional layers to the base model.,By excluding transformer layers from the fine-tuning process entirely.,By allowing updates across all layers of the model.,By restricting updates to only a specific group of transformer layers.,D
+"### Question 105
+Which properties must each JSON object contain in the training dataset when fine-tuning a custom model in OCI Generative AI?","question and ""answer""","request and ""response""","input and ""output""","prompt and ""completion""",D
+"### Question 106
+Consider the following block of code:
+```python
+vs = OracleVS(embedding_function=embed_model, client=conn23c, table_name=""DEMO_TABLE"", distance_strategy=DistanceStrategy.DOT)
+retv = vs.as_retriever(search_type=""similarity"", search_kwargs={'k': 3})
+```
+What is the primary advantage of using this code?",It allows new documents to be indexed automatically when the server restarts.,It enables the creation of a vector store from a database table of embeddings.,It helps with debugging the application.,It provides an efficient method for generating embeddings.,B
+"### Question 107
+You have set up an Oracle Database 23c table so that Generative AI Agents can connect to it. You now need to set up a database function that can return vector search results from each query. What does the SCORE field represent in the vector search results returned by the database function?",The unique identifier for each document,The distance between the query vector and the BODY vector,The token count of the BODY content,The top_k rank of the document in the search results,B
+"### Question 108
+What source type must be set in the subnet's ingress rule for an Oracle Database in OCI Generative AI Agents?",Public Internet,IP Address,CIDR,Security Group,D
+"### Question 109
+In OCI Generative AI Agents, if an ingestion job processes 20 files and 2 fail, what happens when the job is restarted?",All 20 files are re-ingested from the beginning.,None of the files are processed during the restart.,The job processes all 20 files regardless of updates.,Only the 2 failed files that have been updated are ingested.,D
+"### Question 110
+How does a Large Language Model (LLM) decide on the first token versus subsequent tokens when generating a response?","The first token is chosen based on the probability distribution of the model's entire vocabulary, while subsequent tokens are created independently of the prompt.","The first token is randomly selected, while subsequent tokens are always chosen based on the input prompt alone.","The first token is selected using only the model's past responses, while subsequent tokens are generated based on the input prompt.","The first token is selected solely based on the input prompt, while subsequent tokens are chosen based on previous tokens and the input prompt.",D
+"### Question 111
+A software engineer is developing a chatbot using a large language model and must decide on a decoding strategy for generating the chatbot's replies. Which decoding approach should they use in each of the following scenarios to achieve the desired outcome?","To minimize the risk of nonsensical replies, the engineer opts for non-deterministic decoding with a very low temperature.","For maximum consistency in the chatbot's language, the engineer chooses greedy decoding with a low temperature setting.","In a situation requiring creative and varied responses, the engineer selects greedy decoding with an increased temperature.","To ensure the chatbot's responses are diverse and unpredictable, the engineer sets a high temperature and uses non-deterministic decoding.",D
+"### Question 112
+Which statement best describes the role of encoder and decoder models in natural language processing?",Encoder models and decoder models both convert sequences of words into vector representations without generating new text.,"Encoder models are used only for numerical calculations, whereas decoder models are used to interpret the calculated numerical values back into text.","Encoder models convert a sequence of words into a vector representation, and decoder models take this vector representation to generate a sequence of words.","Encoder models take a sequence of words and predict the next word in the sequence, whereas decoder models convert a sequence of words into a numerical representation.",C
+"### Question 113
+How long does the OCI Generative AI Agents service retain customer-provided queries and retrieved context?","Indefinitely, for future analysis",Only during the user's session,For up to 30 days after the session ends,Until the customer deletes the data manually,B
+"### Question 114
+Which is a distinguishing feature of ""Parameter-Efficient Fine-tuning (PEFT)"" as opposed to classic ""Fine-tuning"" in large language model training?","PEFT involves only a few or new parameters and uses labeled, task-specific data.",PEFT does not modify any parameters but uses soft prompting with unlabeled data.,"PEFT modifies all parameters and uses unlabeled, task-agnostic data.",PEFT modifies all parameters and is typically used when no training data exists.,A
+"### Question 115
+How does retrieval-augmented generation (RAG) differ from prompt engineering and fine-tuning in terms of setup complexity?",RAG requires fine-tuning on a smaller domain-specific dataset.,RAG is more complex to set up and requires a compatible data source.,RAG is simpler to implement as it does not require training costs.,RAG involves adding LLM optimization to the model's prompt.,B
+"### Question 116
+Which category of pretrained foundational models is available for on-demand serving mode in the OCI Generative AI service?",Chat Models,Translation Models,Generation Models,Summarization Models,A
+"### Question 117
+Consider the following block of code:
+```python
+vs = OracleVS(embedding_function=embed_model, client=conn23c, table_name=""DEMO_TABLE"", distance_strategy=DistanceStrategy.DOT)
+retv = vs.as_retriever(search_type=""similarity"", search_kwargs={""k"": 3})
+```
+Which prerequisite steps must be completed before this code can execute successfully?",Documents must be indexed and saved in the specified table.,Embeddings must be created and stored in the database.,A response must be generated before running the retrieval process.,Documents must be retrieved from the database before running the retriever.,B
+"### Question 118
+You are developing a chatbot that processes sensitive data, which must remain secure and not be exposed externally. What is an approach to embedding the data using Oracle Database 23ai?",Store embeddings in an unencrypted external database.,Import and use an ONNX model.,Use a third party model via a secure API.,Use open-source models.,B
+"### Question 119
+When using a specific LLM and splitting documents into chunks, which parameter should you check to ensure the chunks are appropriately sized for processing?",Number of LLM parameters.,Context window size.,Number of LLM layers.,Max number of tokens LLM can generate.,B
+"### Question 120
+How should you handle a data source in OCI Generative AI Agents if your data is not ready yet?",Upload placeholder files larger than 100 MB as a temporary solution.,Create an empty folder for the data source and populate it later.,Use multiple buckets to store the incomplete data.,Leave the data source configuration incomplete until the data is ready.,B
+"### Question 121
+You create a fine-tuning dedicated AI cluster to customize a foundational model with your custom training data. How many unit hours are required for fine-tuning if the cluster is active for 10 days?",480 unit hours,240 unit hours,744 unit hours,20 unit hours,A
+"### Question 122
+Given the following code:
+chain = prompt | llm
+Which statement is true about LangChain Expression Language (LCEL)?",LCEL is a programming language used to write documentation for LangChain.,LCEL is a legacy method for creating chains in LangChain.,LCEL is a declarative and preferred way to compose chains together.,LCEL is an older Python library for building Large Language Models.,C
+"### Question 123
+Why is normalization of vectors important before indexing in a hybrid search system?",It ensures that all vectors represent keywords only.,It significantly reduces the size of the database.,It standardizes vector lengths for meaningful comparison using metrics such as Cosine Similarity.,It converts all sparse vectors to dense vectors.,C
+"### Question 124
+What is the purpose of the ""stop sequence"" parameter in the OCI Generative AI Generation models?",It specifies a string that tells the model to stop generating more content.,It assigns a penalty to frequently occurring tokens to reduce repetitive text.,It determines the maximum number of tokens the model can generate per response.,"It controls the randomness of the model’s output, affecting its creativity.",A
+"### Question 125
+Given the following code:
+PromptTemplate(input_variables=[""human_input"", ""city""], template=template)
+Which statement is true about PromptTemplate in relation to input_variables?",PromptTemplate requires a minimum of two variables to function properly.,PromptTemplate can support only a single variable at a time.,"PromptTemplate supports any number of variables, including the possibility of having none.",PromptTemplate is unable to use any variables.,C
+"### Question 126
+Which is a key advantage of using T-Few over Vanilla fine-tuning in the OCI Generative AI service?",Reduced model complexity,Enhanced generalization to unseen data,Increased model interpretability,Faster training time and lower cost,D
+"### Question 127
+What does a higher number assigned to a token signify in the ""Show Likelihoods"" feature of the language model token generation?",The token is less likely to follow the current token.,The token is more likely to follow the current token.,The token is unrelated to the current token and will not be used.,The token will be the only one considered in the next generation step.,B
+"### Question 128
+What do embeddings in Large Language Models (LLMs) represent?",The color and size of the font in textual data,The frequency of each word or pixel in the data,The semantic content of data in high-dimensional vectors,The grammatical structure of sentences in the data,C
+"### Question 129
+Which is a key characteristic of the annotation process used in T-Few fine-tuning?",T-Few fine-tuning uses annotated data to adjust a fraction of model weights.,T-Few fine-tuning requires manual annotation of input-output pairs.,T-Few fine-tuning involves updating the weights of all layers in the model.,T-Few fine-tuning relies on unsupervised learning techniques for annotation.,A
+"### Question 130
+Which is NOT a typical use case for LangSmith Evaluators?",Measuring coherence of generated text,Aligning code readability,Evaluating factual accuracy of outputs,Detecting bias or toxicity,B
+"### Question 131
+What is the purpose of Retrieval Augmented Generation (RAG) in text generation?",To generate text based only on the model's internal knowledge without external data,To generate text using extra information obtained from an external data source,To store text in an external database without using it for generation,To retrieve text from an external source and present it without any modifications,B
+"### Question 132
+How does the integration of a vector database into Retrieval-Augmented Generation (RAG)-based Large Language Models (LLMs) fundamentally alter their responses?",It transforms their architecture from a neural network to a traditional database system.,It shifts the basis of their responses from pretrained internal knowledge to real-time data retrieval.,It enables them to bypass the need for pretraining on large text corpora.,It limits their ability to understand and generate natural language.,B
+"### Question 133
+How does the structure of vector databases differ from traditional relational databases?",A vector database stores data in a linear or tabular format.,It is not optimized for high-dimensional spaces.,It is based on distances and similarities in a vector space.,It uses simple row-based data storage,C
+"### Question 134
+Which is NOT a category of pretrained foundational models available in the OCI Generative AI service?",Summarization models,Generation models,Translation models,Embedding models,C
+"### Question 135
+Given the following prompts used with a Large Language Model, classify each as employing the Chain-of-Thought, Least-to-Most, or Step-Back prompting technique:","1: Step-Back, 2: Chain-of-Thought, 3: Least-to-Most","1: Least-to-Most, 2: Chain-of-Thought, 3: Step-Back","1: Chain-of-Thought, 2: Step-Back, 3: Least-to-Most","1: Chain-of-Thought, 2: Least-to-Most, 3: Step-Back",C
+"### Question 136
+Which statement is true about string prompt templates and their capability regarding variables?",They can only support a single variable at a time.,They are unable to use any variables.,"They support any number of variables, including the possibility of having none.",They require a minimum of two variables to function properly.,C
+"### Question 137
+How are documents usually evaluated in the simplest form of keyword-based search?",By the complexity of language used in the documents,Based on the number of images and videos contained in the documents,Based on the presence and frequency of the user-provided keywords,According to the length of the documents,C
+"### Question 138
+What do prompt templates use for templating in language model applications?",Python's list comprehension syntax,Python's str.format syntax,Python's lambda functions,Python's class and object structures,B
+"### Question 139
+Which LangChain component is responsible for generating the linguistic output in a chatbot system?",Document Loaders,Vector Stores,LangChain Application,LLMs,D
+"### Question 140
+How are chains traditionally created in LangChain?",By using machine learning algorithms,"Declaratively, with no coding required","Using Python classes, such as LLMChain and others",Exclusively through third-party software integrations,C
+"### Question 141
+What does ""k-shot prompting"" refer to when using Large Language Models for task-specific applications?",Providing the exact k words in the prompt to guide the model's response,Explicitly providing k examples of the intended task in the prompt to guide the model’s output,The process of training the model on k different tasks simultaneously to improve its versatility,Limiting the model to only k possible outcomes or answers for a given task,B
+"### Question 142
+You create a fine-tuning dedicated AI cluster to customize a foundational model with your custom training data. How many unit hours are required for fine-tuning if the cluster is active for 10 hours?",25 unit hours,40 unit hours,20 unit hours,30 unit hours,C
+"### Question 143
+What does the Ranker do in a text generation system?",It generates the final text based on the user's query.,It sources information from databases to use in text generation.,It evaluates and prioritizes the information retrieved by the Retriever.,It interacts with the user to understand the query better.,C
+"### Question 144
+Given the following code block:
+history = StreamlitChatMessageHistory(key=""chat_messages"")
+memory = ConversationBufferMemory(chat_memory=history)
+Which statement is NOT true about StreamlitChatMessageHistory?",StreamlitChatMessageHistory will store messages in Streamlit session state at the specified key.,A given StreamlitChatMessageHistory will NOT be persisted.,A given StreamlitChatMessageHistory will not be shared across user sessions.,StreamlitChatMessageHistory can be used in any type of LLM application,D
+"### Question 145
+How do Dot Product and Cosine Distance differ in their application to comparing text embeddings in natural language processing?","Dot Product assesses the overall similarity in content, whereas Cosine Distance measures topical relevance.","Dot Product is used for semantic analysis, whereas Cosine Distance is used for syntactic comparisons.","Dot Product measures the magnitude and direction of vectors, whereas Cosine Distance focuses on the orientation regardless of magnitude.","Dot Product calculates the literal overlap of words, whereas Cosine Distance evaluates the stylistic similarity.",C
+"### Question 146
+What is the purpose of Retrievers in LangChain?",To train Large Language Models,To retrieve relevant information from knowledge bases,To break down complex tasks into smaller steps,To combine multiple components into a single pipeline,B
+"### Question 147
+What is the function of the Generator in a text generation system?",To collect user queries and convert them into database search terms,To rank the information based on its relevance to the user's query,"To generate human-like text using the information retrieved and ranked, along with the user's original query",To store the generated responses for future use,C
+"### Question 148
+What does the RAG Sequence model do in the context of generating a response?",It retrieves a single relevant document for the entire input query and generates a response based on that alone.,"For each input query, it retrieves a set of relevant documents and considers them together to generate a cohesive response.",It retrieves relevant documents only for the initial part of the query and ignores the rest.,It modifies the input query before retrieving relevant documents to ensure a diverse response.,B
+"### Question 149
+What is LangChain?",A JavaScript library for natural language processing,A Python library for building applications with Large Language Models,A Java library for text summarization,A Ruby library for text generation,B
+"### Question 150
+What is the primary purpose of LangSmith Tracing?",To generate test cases for language models,To analyze the reasoning process of language models,To debug issues in language model outputs,To monitor the performance of language models,C
+"### Question 151
+Which is NOT a built-in memory type in LangChain?",ConversationImageMemory,ConversationBufferMemory,ConversationSummaryMemory,ConversationTokenBufferMemory,A
+"### Question 152
+An AI development company is working on an AI-assisted chatbot for an online retail company. The goal is to answer policy questions and retain chat history within a session. Which model type is best?",A keyword search-based AI,An LLM enhanced with Retrieval-Augmented Generation (RAG),An LLM dedicated to generating text without external data integration,A pre-trained LLM model from Cohere or OpenAI,B
